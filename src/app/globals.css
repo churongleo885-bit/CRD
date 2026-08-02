@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #2e1b15;
+  
+  --card: #ffffff;
+  --card-foreground: #2e1b15;
+  
+  --popover: #ffffff;
+  --popover-foreground: #2e1b15;
+  
+  --primary: #8b5a2b; /* Brown */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f7f4ed; /* Cream/Beige */
+  --secondary-foreground: #3e2723;
+  
+  --muted: #f0ebe1;
+  --muted-foreground: #6b5c58;
+  
+  --accent: #a0522d; /* Terracotta */
+  --accent-foreground: #ffffff;
+  
+  --destructive: #9f1239;
+  --destructive-foreground: #ffffff;
+  
+  --border: #e6dfd3;
+  --input: #e6dfd3;
+  --ring: #8b5a2b;
+  
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1412;
+    --foreground: #f7f4ed;
+    
+    --card: #241c19;
+    --card-foreground: #f7f4ed;
+    
+    --popover: #241c19;
+    --popover-foreground: #f7f4ed;
+    
+    --primary: #cd661d;
+    --primary-foreground: #ffffff;
+    
+    --secondary: #332621;
+    --secondary-foreground: #f7f4ed;
+    
+    --muted: #332621;
+    --muted-foreground: #b3a7a3;
+    
+    --accent: #a0522d;
+    --accent-foreground: #ffffff;
+    
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f7f4ed;
+    
+    --border: #40322c;
+    --input: #40322c;
+    --ring: #cd661d;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --font-sans: var(--font-inter, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-outfit, ui-monospace, SFMono-Regular, monospace);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  @apply antialiased;
+}
